@@ -102,11 +102,14 @@ const LoginScreen = () => {
             <label htmlFor="">Contraseña</label> {/* Cambiado for a htmlFor */}
             <i className="bx bxs-lock-alt"></i>
           </div>
-
+            {/* BOTON CAMBIAR A REGISTRO */}
           <button type="submit" className="btn anima" style={{ '--i': 21, '--j': 5 }}>Registrarme</button>
 
           <div className="logreg-link anima" style={{ '--i': 22, '--j': 6 }}>
-            <p>Ya tienes una cuenta? <a href="#" className="login-link">Acceder</a></p>
+            {/* BOTON ACCEDER */}
+            <p>Ya tienes una cuenta? <button type='submit' className="login-link">Acceder</button></p>
+          
+
           </div>
         </form>
       </div>
