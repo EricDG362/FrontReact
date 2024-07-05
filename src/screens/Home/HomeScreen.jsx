@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect,useState } from 'react'
 import { getProducts } from '../../fetching/products.fetching'
 import { Link } from 'react-router-dom'
 
@@ -11,7 +11,7 @@ const HomeScreen = () => {
     () => {
       getProducts()
       .then((productos) => { 
-        console.log(productos)
+       
         setLoading(false)
         setProducts(productos)
       })
@@ -32,7 +32,7 @@ const HomeScreen = () => {
           <div>
             {products.map(product => {
               return (    //esto deberia ser un componente
-                <div> key={product._id}
+                <div key={product._id}> 
                 <h2>{product.titulo}</h2>
                 <p>{product.descripcion}</p>
                 <span>{product.precio}</span>
