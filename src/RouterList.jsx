@@ -31,6 +31,8 @@ const RouterList = () => {
 			<Route path='/register' element={<RegisterScreen />} />
 			<Route path='/' element={<LoginScreen />} />
 			<Route path='/home' element={<HomeScreen />} />
+			<Route path='/detail/:pid' element={<DetailScreeen />} />
+
 		</Routes>
 	)
 }
