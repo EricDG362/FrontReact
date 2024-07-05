@@ -10,7 +10,7 @@ const getProducts = async () => {
 } 
 
 const getProductoDetailId   = async (pid) => {
-    const response = await HTTP.GET(URL.URL_API + "/" + pid)
+    const response = await HTTP.GET(URL.URL_API + PRODUCTS_ROUTE + "/" + pid)
     return response.producto
 }
 

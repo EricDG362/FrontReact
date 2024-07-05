@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { getProductoDetailId } from "../../fetching/products.fetching";
 
 
 const DetailScreen = () =>{
 
     const {pid} = useParams() // es un hook que nod devuelveel parametro de busqueda (pid) desestructuracion
+ 
     const [loading,setLoading] = useState (true)
     const [product,setProduct] = useState (null)
 
 
     useEffect(() => {
 
-    getProductoDetailId () //una vez pobtenido el pid lllamamos al fetch get de producto
+    getProductoDetailId (pid) //una vez pobtenido el pid lllamamos al fetch get de producto
         .then(producto => {
             setLoading(false)
             setProduct(producto)

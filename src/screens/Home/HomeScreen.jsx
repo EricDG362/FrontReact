@@ -36,7 +36,7 @@ const HomeScreen = () => {
                 <h2>{product.titulo}</h2>
                 <p>{product.descripcion}</p>
                 <span>{product.precio}</span>
-                <Link to={'/detalle/' + product._id}>Ver Detalle</Link>
+                <Link to={'/detail/' + product._id}>Ver Detalle</Link>
                 </div>
               )
             })}
