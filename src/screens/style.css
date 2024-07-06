@@ -52,8 +52,8 @@ body{
 }
 /* este funciona con el js la ctiva cunandi apreto el boton de registrar*/
 .wrapper.active .form-box.login .anima{  
-    transform: translateX(-120%);
-    opacity: 0;
+    /* transform: translateX(-120%); */
+    opacity: 1;
     filter: blur(10px);
     transition-delay: calc(.1s * var(--i));
 }
@@ -61,7 +61,7 @@ body{
 .wrapper .form-box.register{
     right: 0;
     padding: 0 40px 0 60px;
-    pointer-events: none;
+    /* pointer-events: none; */
    
 }
 .wrapper.active .form-box.register{
@@ -69,9 +69,9 @@ body{
 }
 
 .wrapper .form-box.register .anima{
-transform: translateX(120%);
-opacity: 0;
-filter: blur(10px);
+/* transform: translateX(120%); */
+opacity: 1;
+/* filter: blur(10px); */
 transition: .7s ease;
 transition-delay: calc(.1s * var(--j));
 
@@ -128,10 +128,10 @@ margin: 25px 0;
     transition: .5s;     /*esto mas el valid y focus de abajo hacen el efecto que se suba o baje */
 }
 
-.input-box input:focus~label,
-.input-box input:valid~label{
-    top: -5px;
-    color: #0ef;
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+  color: #0ef;
 }
 
 .input-box i{
@@ -224,7 +224,8 @@ transition: .5s;
 }
 /* este funciona con el js la ctiva cunandi apreto el boton de registrar*/
 .wrapper.active .info-text.login .anima{  
-    transform: translateX(120%); /* aca es positivo el porcentaje xq se va para la derecha */
+    /* aca es positivo el porcentaje xq se va para la derecha */
+    /* transform: translateX(120%);  */
     opacity: 0;
     filter: blur(10px);
     transition-delay: calc(.1s * var(--i));
@@ -250,9 +251,9 @@ transition: .5s;
 }
 
 .wrapper .info-text.register .anima {
-transform: translateX(-120%);
-opacity: 0;
-filter: blur(10px);
+/* transform: translateX(-120%); */
+opacity: 1;
+/* filter: blur(10px); */
 transition: .7s ease;
 transition-delay: calc(.1s * var(--j));
 

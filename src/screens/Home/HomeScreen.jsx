@@ -1,4 +1,4 @@
-import React, { useEffect,useState } from 'react'
+import React, { useEffect,  useState } from 'react'
 import { getProducts } from '../../fetching/products.fetching'
 import { Link } from 'react-router-dom'
 
@@ -11,7 +11,7 @@ const HomeScreen = () => {
     () => {
       getProducts()
       .then((productos) => { 
-       
+       console.log(productos)
         setLoading(false)
         setProducts(productos)
       })
