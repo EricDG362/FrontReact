@@ -26,6 +26,8 @@ const LoginScreen = () => {
   return (
     <div>
         <form onSubmit={handleSubmit}>
+          <h1>Ingrese con su cuenta</h1>
+
             <div>
                 <label htmlFor="email">Ingrese su email:</label>
                 <input placeholder='joeDoe@gmail.com' id='email' name='email'/>
@@ -39,7 +41,7 @@ const LoginScreen = () => {
                 &&
                 <span style={{color: 'red'}}>{errorText}</span>
             }
-            <span>Si aun no estas registrado, <Link to={'/register'}>registrate</Link></span>
+            <span>Si aun no estas registrado, <Link to={'/register'}> Registrate</Link></span>
             <button type='submit'>Iniciar sesion</button>
         </form>
     </div>

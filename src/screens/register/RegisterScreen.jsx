@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { registrar } from '../../fetching/auth.fetching'
 
 const RegisterScreen = () => {
@@ -38,6 +38,8 @@ const RegisterScreen = () => {
                 &&
                 <span style={{color: 'red'}}>{errorText}</span>
             }
+
+            <span>Si posees una cuenta vuelva al login, <Link to={'/login'}>Volver</Link></span>
             <button type='submit'>Registrar</button>
         </form>
     </div>
