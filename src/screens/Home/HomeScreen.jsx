@@ -2,6 +2,7 @@ import React, { useEffect,  useState } from 'react'
 import { getProducts } from '../../fetching/products.fetching'
 import { Link } from 'react-router-dom'
 
+
 const HomeScreen = () => {
 
   const [products, setProducts] = useState ([])
@@ -33,6 +34,7 @@ const HomeScreen = () => {
             {products.map(product => {
               return (    //esto deberia ser un componente
                 <div key={product._id}> 
+                <img src="./img/valencia_moda3_1702758267202.jpeg" alt="foto" />
                 <h2>{product.titulo}</h2>
                 <p>{product.descripcion}</p>
                 <span>{product.precio}</span>

@@ -1,0 +1,398 @@
+html {
+
+    font-size: 62.5%;
+    /*es igual a 10px de 16px (operacion matematica) en vez de font-size 16px*/
+
+}
+
+body{
+    font-size: 1.6rem; /*tamaña de letras para el body y usamos rem*/
+    background-color: #f5f5f5;
+}
+
+
+/*Globales*/
+img {
+    max-width: 100%;
+    /* se ajusta al 100% de su contenedor*/
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 3.4rem;
+}
+
+h3 {
+    font-size: 2.8rem;
+}
+
+h4 {
+    font-size: 2.4rem;
+}
+
+
+/* UTILIDADES */
+
+.contenedor{
+    overflow: hidden;
+    max-width: 1200px; 
+    width: 100%;
+    margin: 0   auto;
+   
+}
+
+.contenido-centrado {
+    max-width: 80rem;
+
+}
+
+.seccion {
+
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+}
+
+.centrar-texto{
+    text-align: center;
+}
+.no-margin{
+    margin: 0 ; /*para quitarle los margenes a ls h1 h2 y p*/
+}
+
+.fw-300 {
+    font-weight: 600;
+    /* el ancho de la negrita*/
+}
+
+
+
+
+/*HEADER*/
+.site-header{
+    background-image:url(../../screens/Home/img/fondo-negocio-1.jpg);
+    background-repeat: no-repeat; /*para q no se repita la imagen*/
+    background-position: center center; /*la posicionamos*/
+    background-size: cover; /*se llena el alto y el ancho*/
+    background-attachment: fixed; /*para q se mueva la imagen de fondo*/
+    height: 50vh;
+    height: 60rem; /*600px de alto para q se vea mejor*/
+    
+
+}
+
+.site-header a{ /* sus enlaces*/
+
+    color: beige; /*color del texto*/
+    text-decoration: none /* le sacamos la linea de abajo*/;
+    margin-top: 1rem; /*10px de sepracion en enlaces*/
+   
+}
+
+@media (min-width:501px){ /*la mediaQuery para la barra para q cuando crezca se ponga una al lado de la otra*/
+
+    .barra {
+        display: flex;
+        justify-content: space-around; /*uno separado de otro*/
+        align-items: center;
+        padding-top: 2rem;
+        margin-left: 1rem;
+    }
+
+}
+
+.site-header h1{
+    text-align: center;
+    font-weight: 700;
+}
+
+.site-header span{
+    font-weight: 100;
+}
+
+/*NAVEGACION */
+.navegacion a{
+    background-color: rgb(231, 46, 191);
+    color: black;
+    text-align: center; /*lo centramos*/
+    display: block; /*que cada elemento tenga su linea o sea en bloque*/
+    font-size: 2.2rem; /*tamaño*/
+   
+
+    }
+
+    @media (min-width: 501px) {
+        .navegacion a{
+            display: inline;/*cambiamops de displey block  line para q lo ponga uno al lado del otro*/
+            margin-right: 2rem; /*q todos tengan un margen derecho*/
+            text-align: center;
+            
+        }
+        .navegacion a:last-of-type{
+            margin: 1; /*excepto el ultimo*/
+
+        }
+
+    }
+
+
+   
+
+
+
+/*TEXTO-HEADER*/
+.texto-header{
+text-align:center ;
+color: beige;
+margin-top: 15rem; /*margen de arriba*/
+}
+@media (min-width: 501) {
+    .texto-header{
+        margin-top: 5rem; /*150px de separacion cuando se agrande*/
+    }
+}
+
+.texto-header p{
+font-size: 2.2rem;
+margin-top: 2rem;
+
+}
+
+
+
+/*IMAGEN CENTRAL LOGO*/
+
+.contenedor-imagen {
+    display: flex;
+    flex-direction: column;
+    /* en direccion de columna o sea de arriab abajo ya q row es x defecto*/
+    justify-content: center;
+    margin-left: 35rem;
+    width: 40%;
+    height: 50%;
+}
+
+.contenedor-imagen img{
+margin-left: 5rem;
+
+}
+
+
+.contenedor-imagen h2{
+ margin-left: 17rem;
+}
+
+
+
+/*CARROUSEL*/
+
+.carousel-inner{
+    border-radius: 10%;
+    width: 35%;
+}
+
+.carousel {
+    display: flex; /*flexbox al contenedor padre carrousel*/
+    justify-content: center; /*centramos*/
+    margin-top: 5rem; /*margen de arriba con el DESTACADOS*/
+    margin-bottom: 5rem;
+
+}
+
+.carousel-control-prev-icon{
+    background-color: rgb(229, 88, 213);
+    width: 80%;
+    height: 80%;
+    margin-left: 10rem;
+}
+
+.carousel-control-next-icon{
+    background-color: rgb(238, 63, 226);
+    width: 80%;
+    height: 80%;
+    margin-right: 10rem;
+}
+ 
+
+
+
+/*BOTONES*/
+
+.a{   /*cuando lo ponga sobre el mouse cambia*/
+    cursor: pointer;
+ 
+   
+}
+
+.boton {
+    color: #ffffff;
+    text-decoration-line: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 600;
+    border: none;
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    display: inline-block;
+
+
+}
+
+.boton-rosa {
+    background-color: #be4caf;
+}
+
+.boton:hover{   /*cuando lo ponga sobre el mouse cambia*/
+    cursor: pointer;
+    background-color: aliceblue;
+    color: #be4caf;
+}
+
+.d-block {
+    display: block;
+    /* PARA Q EL BOTON TOME TODO EL ANCHO*/
+}
+
+.precio {
+    font-weight: 700;
+    /*grosor*/
+    color: #db41ba;
+    
+}
+
+
+
+
+/*Anuncios*/
+.contenedor-anuncioss {
+    display: flex;
+    /*aplicamos flexbox*/
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* seguimos teniendo 3 columnas en los anuncios x mas q agreguemos mas anuncios. xq respeta el flex basis que tenemos abajo*/
+}
+.anuuncios {
+    flex: 0 0 calc(33.3% - 1rem);
+    /* se puede poner todo en una sola linea*/
+    /*flex-grow: 0 ; para que se agrande*/
+    /*flex-shrink: 0; para q no se encoja al agregar elementos*/
+    /*flex-basis: calc(33.3% - 1rem) ;*/
+    border: 1px solid #b5b5b5;
+    /* 3 parametros 1 el ggrosor 2 el estilo y 3 el color*/
+    background: #f5f5f5;
+    margin-bottom: 3rem;
+}
+
+.contenido-anuncio {
+    padding: 2rem;
+    /* 20px de separacion en los 4 lados*/
+}
+
+.contenido-anuncio h3,
+.contenido-anuncio p {
+    /*para aplicarle al h3 y el p pero solo de la class esta*/
+    margin: 0px;
+    line-height: 4rem;
+    /*interlineado*/
+
+}
+
+
+/*FORMULARIO*/
+
+.contenedorFormu {
+
+    width: 60%;
+   
+
+}
+
+legend{
+    font-size: 2.4rem;
+    color: #333333;
+    margin-bottom: 3rem;
+
+}
+
+label {
+    font-weight: 700; /*mas grueso*/
+    text-transform: uppercase; /*todo mayuscula*/
+    margin-bottom: 1rem;
+    display: block; /*para q se pongan uno abajo de otro como columnas y tome todo el espacio disponible*/
+}
+
+
+
+.contactosss p{
+    font-size: 1.4rem;
+    color: #4f4f4f;
+    margin: 2rem 0 0 0;
+}
+
+fieldset {
+    background-color: rgb(244, 205, 232);
+    margin-bottom: 3rem;
+    
+}
+
+input:not([type="submit"]),textarea, select { /*que aplique a todos los input excepto el submit*/
+    padding: 1rem;
+    display: block; /*para q tome todo el espacio disponible*/
+    width: 98%; /*forzamos para q mida el 100%*/
+    margin-bottom: 2rem; /*margen de abajo*/
+    border: none;
+    border-radius: 1rem;
+
+}
+
+select{
+    -webkit-appearance: none; /*un prefijo para q haga efecto el select de arriba(los estilos)*/
+    appearance: none;
+    width: 99.5%;
+    
+}
+
+textarea{
+    height: 20rem;
+}
+
+.forma{ /*para comodar los radio*/
+    max-width: 30rem;
+    display: flex; /*uno al lado del otro*/
+    justify-content: space-between;
+    align-items: center; 
+}
+input[type="radio"]{
+margin: 0;
+}
+
+ 
+
+
+
+
+
+
+    /*FOOTER*/
+footer{
+    background-color: rgb(250, 168, 233);
+    padding: 30px;
+    text-align: center;
+   margin: 0 0 0 0;
+}
+
+.redesSociales{
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.redesSociales i{
+    margin: 5px 10px;
+    color: brown;
+}
+
+

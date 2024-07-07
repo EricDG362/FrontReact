@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { login } from '../../fetching/auth.fetching'
 import { Link, useNavigate } from 'react-router-dom'
 
-import "../login/Login.css"
+import "./../login/Login.css"
 
 
 
@@ -27,6 +27,7 @@ const LoginScreen = () => {
         }
     }
     return (
+
         <div className="wrapper">
 
             <span className="animacion"></span>

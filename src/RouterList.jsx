@@ -3,6 +3,7 @@ import { Route, Routes, useNavigate } from 'react-router-dom'
 import LoginScreen from './screens/login/LoginScreen'
 import RegisterScreen from './screens/register/RegisterScreen'
 import HomeScreen from './screens/Home/HomeScreen'
+import Tienda from './screens/Tienda/Tienda'
 
 import { verificarToken } from './fetching/auth.fetching'
 import DetailScreen from './screens/Detail/DetailScreen'
@@ -33,6 +34,7 @@ const RouterList = () => {
 			<Route path='/register' element={<RegisterScreen />} />
 			<Route path='/' element={<LoginScreen />} />
 			<Route path='/home' element={<HomeScreen />} />
+			<Route path='/tienda' element={<Tienda />} />
 			<Route path='/detail/:pid' element={<DetailScreen />} />
 
 		</Routes>
