@@ -1,5 +1,5 @@
 // import logo from "../../screens/Home/img/fondo.logo.png"
-import '../Tienda/tienda.css'
+import '../Tienda/Tienda.css'
 import { Link } from 'react-router-dom'
 
 

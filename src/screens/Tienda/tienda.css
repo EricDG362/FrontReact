@@ -200,7 +200,7 @@ margin-left: 5rem;
     display: flex; /*flexbox al contenedor padre carrousel*/
     justify-content: center; /*centramos*/
     margin-top: 5rem; /*margen de arriba con el DESTACADOS*/
-    margin-bottom: 5rem;
+  
 
 }
 
@@ -213,9 +213,13 @@ margin-left: 5rem;
 
 .carousel-control-next-icon{
     background-color: rgb(238, 63, 226);
-    width: 80%;
-    height: 80%;
+    width: 50%;
+    height: 100px;
     margin-right: 10rem;
+}
+
+.h2-titu{
+    color: #f5f5f5;
 }
  
 
@@ -266,7 +270,23 @@ margin-left: 5rem;
     font-weight: 700;
     /*grosor*/
     color: #db41ba;
+    background-color: #ffffff;
     
+}
+
+.precio-tienda {
+    font-weight: 700;
+    /*grosor*/
+    color: #db41ba;
+    font-size: 25px;
+}
+.descrip-tienda{
+    font-size: 20px;
+}
+.titu-tienda{
+    font-size: 30px;
+    font-weight: 1200;
+
 }
 
 
@@ -398,6 +418,11 @@ footer{
 .redesSociales i{
     margin: 5px 10px;
     color: brown;
+}
+
+.redesSociales i:hover{
+    color: #30132c
+
 }
 
 
