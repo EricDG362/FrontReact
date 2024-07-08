@@ -17,6 +17,18 @@ import { Link} from 'react-router-dom'
 
 function Tienda() {
 
+
+
+
+
+
+
+    
+
+
+
+
+
     return (
 
         <div>

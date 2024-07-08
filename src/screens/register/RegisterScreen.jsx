@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { registrar } from '../../fetching/auth.fetching'
 
+import "./../login/Login.css"
+
 const RegisterScreen = () => {
     const [errorText, setErrorText] = useState('')
     const navigate = useNavigate()
