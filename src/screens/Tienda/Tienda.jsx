@@ -5,9 +5,12 @@ import imag3 from "../../screens/Home/img/valencia_moda3_1702758271498.jpeg"
 import imag4 from "../../screens/Home/img/valencia_moda3_1702758271498.jpeg"
 import imag5 from "../../screens/Home/img/valencia_moda3_1702758271498.jpeg"
 
-import logo from "../../screens/Home/img/fondo.logo.png"
+// import logo from "../../screens/Home/img/fondo.logo.png"
 
 import "./../Tienda/tienda.css"
+// import Contacto from "./Contacto";
+// import Home from './Home';
+import { Link} from 'react-router-dom'
 
 
 
@@ -25,28 +28,27 @@ function Tienda() {
                     {/* <!-- creamos una tipo barra para aplicar flexbox a barra y a navegacion --> */}
                     <div className="barra">
                         {/* <!-- EL enlaces a la pagina principal --> */}
-                        <a href="index.html">
+                        <a href="#">
                             <h1 className="no-margin">VALENCIA.<span>Moda</span></h1>    
                              </a> 
 
-{/* 
-                        <Router>
-                        <nav className="navegacion">
+ 
+                        {/* <Router> */}
+                     <nav className="navegacion">
 
-                        <Link to= "/Home"  className="boton boton-rosa" >Home</Link>
+                        <Link to= "/tienda"  className="boton boton-rosa" >Home</Link>
 
-
-                            <Link to= "/Contacto"  className="boton boton-rosa" > Contacto</Link>
+                       <Link to= "/Contacto"  className="boton boton-rosa" > Contacto</Link>
 
                            
-                        </nav>
+                   </nav> 
 
-                        <Routes>
+                        {/* <Routes>
                             <Route path='/Contacto' element={<Contacto />}/>     
                             <Route path='/Home' element={<Home />}/> 
                         </Routes>
 
-                        </Router> */}
+                        </Router>  */}
 
                     </div>
                     {/* <!--cierra barra--> */}
@@ -60,18 +62,13 @@ function Tienda() {
             </header>
 
 
-            <div className="contenedor-imagen">
-
-                {/* <img src={logo} alt="fondo" /> */}
-
-                <h2>DESTACADOS</h2>
-            </div>
+          
 
             {/* ##############Tienda */}
 
             <main className="seccion contenedor">
 
-                <h2 className="fw-300 centrar-texto">Nuestra Tienda</h2>
+                <h2 className="fw-300 centrar-texto">DESTACADOS <br />Nuestra Tienda</h2>
                 <div className="contenedor-anuncioss">
                     <div className="anuuncios">
                         <img src={imag3} alt="Error de carga anuncio" />
@@ -154,11 +151,11 @@ function Tienda() {
     {/* <!--estas logos se ven gracias a fontawesome--> */}
     <div className="redesSociales"> 
     {/* <!--es texto plano no una imagen x ende para agrandarlo se usa fontsize--> */}
-        <i className="fab fa-facebook"></i> 
-        <i className="fab fa-twitter"></i>
-        <i className="fab fa-instagram"></i>
-        <i className="fab fa-linkedin"></i>
-        <i className="fab fa-whatsapp"></i>
+    <i className='bx bxl-facebook-circle'></i>
+                    <i className='bx bxl-twitter' ></i>
+                    <i className='bx bxl-instagram-alt' ></i>
+                    <i className='bx bxl-linkedin-square' ></i>
+                    <i className='bx bxl-whatsapp-square' ></i>
     </div>
     {/* <!--se le agrega el signo de copyright--> */}
     <p>&copy; 2023 Valencia Moda</p> 

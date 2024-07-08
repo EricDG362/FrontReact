@@ -80,6 +80,8 @@ h4 {
     background-attachment: fixed; /*para q se mueva la imagen de fondo*/
     height: 50vh;
     height: 60rem; /*600px de alto para q se vea mejor*/
+  
+   
     
 
 }
@@ -244,12 +246,15 @@ margin-left: 5rem;
 
 .boton-rosa {
     background-color: #be4caf;
+    border-radius: 10px;
+    border: solid 2px #f5f5f5;
 }
 
 .boton:hover{   /*cuando lo ponga sobre el mouse cambia*/
     cursor: pointer;
     background-color: aliceblue;
     color: #be4caf;
+    border: solid 2px #be4caf;
 }
 
 .d-block {
