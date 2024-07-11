@@ -25,7 +25,7 @@ import Carousel from 'react-bootstrap/Carousel';
 
 const DetailScreen = () => {
 
-    const { pid } = useParams() // es un hook que nod devuelveel parametro de busqueda (pid) desestructuracion
+    const { pid } = useParams() // es un hook que nos devuelvel parametro de busqueda (pid) desestructuracion
 
     const [loading, setLoading] = useState(true)
     const [product, setProduct] = useState(null)

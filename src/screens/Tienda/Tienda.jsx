@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useParams, useNavigate } from "react-router-dom";
 
 import { getProducts } from '../../fetching/products.fetching'
-import { eliminar } from '../../fetching/auth.fetching'
+import { eliminaProducto } from '../../fetching/products.fetching'
 
 import imag0 from "../../screens/Home/img/valencia_moda3_1702758271498.jpeg"
 import imag1 from "../../screens/Home/img/valencia_moda3_1702758271498.jpeg"
@@ -22,7 +23,7 @@ import "./../Tienda/Tienda.css"
 
 const Tienda = ({ _id, onDelete }) => {
 
-
+    const navigate = useNavigate()
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
 
@@ -42,9 +43,10 @@ const Tienda = ({ _id, onDelete }) => {
     )
 
     const handleDelete = async (productId) => {
+        console.log("CONSOL DE HANDLEDELETE,", productId);
         try {
-            await eliminar(productId);
-            onDelete(productId); // Llamar a una función para manejar la eliminación en el estado del componente
+            await eliminaProducto(productId);
+            navigate('/tienda')  //QUE NAVEGE A tienda
         } catch (error) {
             console.error("Error al eliminar el producto:", error.message);
         }
@@ -95,9 +97,9 @@ const Tienda = ({ _id, onDelete }) => {
                 loading ?
                     <h2>Cargando...</h2>
                     :
-                        
+
                     <div className="contenedor-anuncioss">
-                        
+
 
                         {products.map(product => {
                             return (
@@ -109,7 +111,7 @@ const Tienda = ({ _id, onDelete }) => {
                                             <p className='descrip-tienda'>{product.descripcion}</p>
                                             <span className='precio-tienda'>${product.precio}</span>
                                             <Link to={'/detail/' + product._id} className="boton boton-rosa d-block">Ver Detalle</Link>
-                                            <button onClick={handleDelete} type='submit' className="boton boton-rojo d-block">Eliminar</button>
+                                            <button onClick={() => handleDelete(product._id)} type="button" className="boton boton-rojo d-block">Eliminar</button>
 
                                         </div>
                                     </div>

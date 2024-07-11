@@ -20,29 +20,26 @@ const getProductoDetailId   = async (pid) => {
 const adddproduct =  async (sumarProducto) => {
     try {
         const response = await HTTP.POST(URL.URL_API + PRODUCTS_ROUTE, sumarProducto)
-        console.log(response)
+       
         return response.products
         
     } catch (error) {
         console.error('error al crear producto', error.message)
         throw{message: error.message}
     }
-
-
 } 
 
-const AgergarProduct = async (sumarProducto) => { //VA A RECIBIR UN producto
+
+ const eliminaProducto = async (pid) => {
+    console.log("log de pro_fetch", pid)
     try {
-        const result = await HTTP.POST(URL.URL_API + PRODUCTS_ROUTE + '/add' ,sumarProducto) //LLAMAMOS AL OBJETO HTTP LE PONEMOS QUE METODO NECESITAMOS (.POST)
-        if (!result.ok) {
-            throw result
-        }
+        const result = await HTTP.DELETE(URL.URL_API + PRODUCTS_ROUTE + "/" + pid);
+        return result;
+    } catch (error) {
+        console.error("Error al eliminar el producto:", error.message);
+        throw { message: error.message };
     }
-    catch (error) {
-        
-        throw { message: error.message }
-    }
-}
+};
 
 
 
@@ -50,4 +47,4 @@ const AgergarProduct = async (sumarProducto) => { //VA A RECIBIR UN producto
 
 
 
-export {getProducts, getProductoDetailId, adddproduct, AgergarProduct}
+export {getProducts, getProductoDetailId, adddproduct, eliminaProducto}

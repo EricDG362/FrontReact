@@ -1,6 +1,6 @@
 import {useNavigate} from 'react-router-dom'
 import React, { useState } from 'react'
-import { AgergarProduct, adddproduct } from '../../fetching/products.fetching'
+import { adddproduct } from '../../fetching/products.fetching'
 
 
 
@@ -27,7 +27,7 @@ const AgregarProducto = () => {
                 stock: event.target.stock.value,
                 codigo: event.target.codigo.value
             }
-            console.log(sumarProducto)
+           
 
             await adddproduct(sumarProducto) //ESTE ES EL EXPORTADO DE AUTH.FETCHING
             setErrorText('')

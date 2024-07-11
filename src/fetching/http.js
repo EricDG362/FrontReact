@@ -33,21 +33,28 @@ export const HTTP = {
 
 
     DELETE: async (url, headers = { 'Content-Type': 'application/json' }) => {
-        try {
-          const response = await fetch(url, {
-            method: 'DELETE',
-            headers: headers
-          });
-          if (!response.ok) {
-            throw new Error(`Error en DELETE: ${response.status} - ${response.statusText}`);
-          }
-          return await response.json();
-        } catch (error) {
-          console.error("DELETE request failed:", error);
-          throw error;
-        }
+        const response = await fetch(url, {
+          method: 'DELETE',
+          headers: headers
+        })
+        return response.json();
       }
-    };
+
+
+
+
+      
+}
+    //       if (!response.ok) {
+    //         throw new Error(`Error en DELETE: ${response.status} - ${response.statusText}`);
+    //       }
+    //       return await response.json();
+    //     } catch (error) {
+    //       console.error("DELETE request failed:", error);
+    //       throw error;
+    //     }
+    //   }
+    // };
 
 
 
