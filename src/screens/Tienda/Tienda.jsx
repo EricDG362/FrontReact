@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
+
 import { getProducts } from '../../fetching/products.fetching'
+import { eliminar } from '../../fetching/auth.fetching'
 
 import imag0 from "../../screens/Home/img/valencia_moda3_1702758271498.jpeg"
 import imag1 from "../../screens/Home/img/valencia_moda3_1702758271498.jpeg"
@@ -13,12 +16,11 @@ import imag5 from "../../screens/Home/img/valencia_moda3_1702758271498.jpeg"
 import "./../Tienda/Tienda.css"
 // import Contacto from "./Contacto";
 // import Home from './Home';
-import { Link } from 'react-router-dom'
 
 
 
 
-const Tienda = () => {
+const Tienda = ({ _id, onDelete }) => {
 
 
     const [products, setProducts] = useState([])
@@ -39,8 +41,14 @@ const Tienda = () => {
         []
     )
 
-
-
+    const handleDelete = async (productId) => {
+        try {
+            await eliminar(productId);
+            onDelete(productId); // Llamar a una función para manejar la eliminación en el estado del componente
+        } catch (error) {
+            console.error("Error al eliminar el producto:", error.message);
+        }
+    };
 
     return (
 
@@ -75,8 +83,11 @@ const Tienda = () => {
                         <h2 className="no-margin">Indumentaria y Accesorios Importados</h2>
                         <p className="no-margin">Lorem ipsum dolor sit amet clitatem aspernatur quas sunt nulla dolorum.</p>
                     </div>
+
                 </div>
                 {/* <!--cierra contenedor--> */}
+                <Link to={'/add'} className="boton boton-rosa d-block">Agregar + productos</Link>
+
             </header>
 
 
@@ -84,8 +95,9 @@ const Tienda = () => {
                 loading ?
                     <h2>Cargando...</h2>
                     :
+                        
                     <div className="contenedor-anuncioss">
-
+                        
 
                         {products.map(product => {
                             return (
@@ -97,6 +109,8 @@ const Tienda = () => {
                                             <p className='descrip-tienda'>{product.descripcion}</p>
                                             <span className='precio-tienda'>${product.precio}</span>
                                             <Link to={'/detail/' + product._id} className="boton boton-rosa d-block">Ver Detalle</Link>
+                                            <button onClick={handleDelete} type='submit' className="boton boton-rojo d-block">Eliminar</button>
+
                                         </div>
                                     </div>
 
@@ -133,7 +147,7 @@ const Tienda = () => {
         </div>
 
     )
-
 }
+
 
 export default Tienda

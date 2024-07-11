@@ -7,6 +7,7 @@ html {
 
 body{
     font-size: 1.6rem; /*tamaña de letras para el body y usamos rem*/
+    background: #e288d6;
     
 }
 
@@ -242,7 +243,7 @@ margin-left: 5rem;
     font-weight: 600;
     border: none;
     padding: 1rem 3rem;
-    margin-top: 3rem;
+    margin-top: 1rem;
     display: inline-block;
 
 
@@ -260,6 +261,20 @@ margin-left: 5rem;
     color: #be4caf;
     border: solid 2px #be4caf;
 }
+
+.boton-rojo {
+    background-color: #931313;
+    border-radius: 10px;
+    border: solid 2px #f5f5f5;
+}
+
+.boton:hover{   /*cuando lo ponga sobre el mouse cambia*/
+    cursor: pointer;
+    background-color: aliceblue;
+    color: #931313;
+    border: solid 2px #931313;
+}
+
 
 .d-block {
     display: block;
@@ -371,6 +386,7 @@ input:not([type="submit"]),textarea, select { /*que aplique a todos los input ex
     margin-bottom: 2rem; /*margen de abajo*/
     border: none;
     border-radius: 1rem;
+    color: #e288d6;
 
 }
 

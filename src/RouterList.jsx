@@ -9,6 +9,7 @@ import Contacto from './screens/Contacto/Contacto'
 
 import { verificarToken } from './fetching/auth.fetching'
 import DetailScreen from './screens/Detail/DetailScreen'
+import AgregarProducto from './screens/addproduct/agregarProducto'
 
 
 const RouterList = () => {
@@ -18,7 +19,7 @@ const RouterList = () => {
 		verificarToken()
 			.then(resultado => {
 				if (resultado.status == 200) {
-					navigate('/home')
+					navigate('/tienda')
 				}
 				else {
 					navigate('/login')
@@ -35,11 +36,13 @@ const RouterList = () => {
 		<Routes>
 			<Route path='/login' element={<LoginScreen />} />
 			<Route path='/register' element={<RegisterScreen />} />
-			<Route path='/' element={<LoginScreen />} />
+			 <Route path='/' element={<LoginScreen />} />             {/*//LA RUTA PRINCIPAL O DE INICIO */}
 			<Route path='/home' element={<HomeScreen />} />
 			<Route path='/tienda' element={<Tienda />} />
 			<Route path='/contacto' element={<Contacto />} />
 			<Route path='/detail/:pid' element={<DetailScreen />} />
+			<Route path='/add' element={<AgregarProducto />} />
+			+
 
 
 		</Routes>

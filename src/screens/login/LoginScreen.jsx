@@ -9,17 +9,17 @@ import "./../login/Login.css"
 const LoginScreen = () => {
     const [errorText, setErrorText] = useState('')
     const navigate = useNavigate()
-    const handleSubmit = async (event) => {
+    const handleSubmit = async (event) => { //FUNCION HANDLETSUBMIT /RECIBE UN EVENTO
         try {
-            event.preventDefault()
+            event.preventDefault()  //PREVIENE EL ENVIO DEL FORMULARIO O SEA Q PREVIENE Q LA PAGINA SE RECARGE
             const usuario = {
-                email: event.target.email.value,
-                password: event.target.password.value
+                email: event.target.email.value, //ACA RECIBE DEL INPUT EMAIL (PROPIEDAD NAME)
+                password: event.target.password.value  //Y ACA DEL PASS (DELA PROPIEDAD NAME)
             }
-            console.log(usuario)
-            await login(usuario)
+            
+            await login(usuario) //ESTE ES EL EXPORTADO DE AUTH.FETCHING
             setErrorText('')
-            navigate('/home')
+            navigate('/tienda')  //QUE NAVEGE A HOME
         }
         catch (error) {
 
@@ -37,7 +37,7 @@ const LoginScreen = () => {
 
                 <h2 className="anima" style={{ '--i': 1, '--j': 22 }}>Ingrese Login</h2>
 
-                <form onSubmit={handleSubmit}>   {/* etiqueta formulario */}
+                <form onSubmit={handleSubmit}>   {/* etiqueta formulario  ACTIVA LA FUNCION HANDLET*/}
 
                     <div className="input-box anima" style={{ "--i": 1, "--j": 22 }}>
                         <label htmlFor="email" ></label>
