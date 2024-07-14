@@ -1,6 +1,3 @@
-// aca trabajamos los fetch q mandemos a nuestro backend
-
-
 
 export const HTTP = {
     //GET TRAE INFORMACION DE LA BASE
@@ -12,13 +9,15 @@ export const HTTP = {
         })
         return response.json()
     },
+
+
     //POST ENVIA INFORMACION  A LA BASE
     POST: async (url, body) => {    //VA A RECIBIR UNA RUTA Y UN BODY
         const response = await fetch(url, {
             method: 'POST',
             headers: { //avisa ATRAVES DEL HEADER al backend que el contenido que va a enviar es de tipo json (XQ SINO LE ENVIABA UN OBJETO VACIO AL BODY)
                 'Content-Type': 'application/json',
-                'Authorization':localStorage.getItem("token")
+                'Authorization': localStorage.getItem("token")
             },
             body: JSON.stringify(body) //EL BODY PASA DE STRING A JSON XQ EL BACKEND RECIBE JSON
         })
@@ -27,34 +26,36 @@ export const HTTP = {
     },
 
 
-    PUT: () => {
-
+    PUT: async (url, body) => {
+        const response = await fetch(url, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': localStorage.getItem("token")
+            },
+            body: JSON.stringify(body)
+        });
+        if (!response.ok) {
+            const error = await response.json();
+            throw new Error(error.message || 'Error al actualizar el producto');
+        }
+        return response.json();
     },
 
 
-    DELETE: async (url, headers = { 'Content-Type': 'application/json' }) => {
-        const response = await fetch(url, {
-          method: 'DELETE',
-          headers: headers
-        })
-        return response.json();
-      }
 
 
-
-
-      
+DELETE: async (url, headers = { 'Content-Type': 'application/json' }) => {
+    const response = await fetch(url, {
+        method: 'DELETE',
+        headers: headers
+    })
+    return response.json();
 }
-    //       if (!response.ok) {
-    //         throw new Error(`Error en DELETE: ${response.status} - ${response.statusText}`);
-    //       }
-    //       return await response.json();
-    //     } catch (error) {
-    //       console.error("DELETE request failed:", error);
-    //       throw error;
-    //     }
-    //   }
-    // };
+
+
+};
+
 
 
 

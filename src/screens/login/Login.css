@@ -10,6 +10,7 @@ body{
     align-items: center;
     min-height: 100vh;
     background: rgb(80, 79, 155);
+    
 
 }
 
@@ -104,10 +105,10 @@ margin: 25px 0;
     background: transparent;
     border: none;
     outline: none;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid #b22e2e;
     padding-right: 23px;
     font-size: 16px;
-    color: #fff;
+    color: #eae8e8;
     font-weight: 500;
     transition: .5s; /*esto mas el valid y focus de abajo hacen el efecto que se suba o baje */
 }
@@ -157,8 +158,8 @@ color: #0ef;
     outline: none;
     border-radius: 40px;
     cursor: pointer;
-    font-size: 16px;
-    color: #fff;
+    font-size: 500px;
+    color: #8d2929;
     font-weight: 600;
     z-index: 1;
    overflow: hidden;  /* oculta el cuadrado de color dentro del boton */
@@ -172,7 +173,7 @@ top: -100%;
 left: 0;
 width: 100%;
 height: 300%;
-background: linear-gradient(#081b29, #0ef, #081b29,#0ef); 
+background: linear-gradient(#71003a, rgb(212, 146, 185), #710458,rgb(199, 108, 187)); 
 z-index: -1;
 transition: .5s;
 }

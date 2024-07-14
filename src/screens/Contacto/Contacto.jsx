@@ -21,10 +21,9 @@ function Contacto() {
                         </a>
                         <nav className="navegacion">
 
-                        <Link to= "/tienda"  className="boton boton-rosa" >Home</Link>
-
-
                             <Link to= "/tienda"  className="boton boton-rosa" >Tienda</Link>
+                        <Link to= "/"  className="boton boton-rosa" >salir</Link>
+
                         </nav>
 
                     </div>

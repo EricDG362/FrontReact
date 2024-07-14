@@ -5,6 +5,7 @@ import RegisterScreen from './screens/register/RegisterScreen'
 import HomeScreen from './screens/Home/HomeScreen'
 import Tienda from './screens/Tienda/Tienda'
 import Contacto from './screens/Contacto/Contacto'
+import Edit from './screens/Edit/Edit'
 
 
 import { verificarToken } from './fetching/auth.fetching'
@@ -40,9 +41,12 @@ const RouterList = () => {
 			<Route path='/home' element={<HomeScreen />} />
 			<Route path='/tienda' element={<Tienda />} />
 			<Route path='/contacto' element={<Contacto />} />
-			<Route path='/detail/:pid' element={<DetailScreen />} />
 			<Route path='/add' element={<AgregarProducto />} />
-			+
+			<Route path='/detail/:pid' element={<DetailScreen />} />
+			<Route path='/edit/:pid' element={<Edit />} />
+
+			
+			
 
 
 		</Routes>

@@ -8,9 +8,8 @@ import { eliminaProducto } from '../../fetching/products.fetching'
 import imag0 from "../../screens/Home/img/valencia_moda3_1702758271498.jpeg"
 import imag1 from "../../screens/Home/img/valencia_moda3_1702758271498.jpeg"
 import imag2 from "../../screens/Home/img/valencia_moda3_1702758271498.jpeg"
-import imag3 from "../../screens/Home/img/valencia_moda3_1702758271498.jpeg"
-import imag4 from "../../screens/Home/img/valencia_moda3_1702758271498.jpeg"
-import imag5 from "../../screens/Home/img/valencia_moda3_1702758271498.jpeg"
+
+import video from "../video/video-fondo.mp4"
 
 // import logo from "../../screens/Home/img/fondo.logo.png"
 
@@ -21,7 +20,7 @@ import "./../Tienda/Tienda.css"
 
 
 
-const Tienda = ({ _id, onDelete }) => {
+const Tienda = () => {
 
     const navigate = useNavigate()
     const [products, setProducts] = useState([])
@@ -45,6 +44,7 @@ const Tienda = ({ _id, onDelete }) => {
     const handleDelete = async (productId) => {
         console.log("CONSOL DE HANDLEDELETE,", productId);
         try {
+           
             await eliminaProducto(productId);
             navigate('/tienda')  //QUE NAVEGE A tienda
         } catch (error) {
@@ -55,11 +55,23 @@ const Tienda = ({ _id, onDelete }) => {
     return (
 
         <div>
+           
+
 
             {/* // <!-- en este contenedor aplicamos la imagen q se expande --> */}
             <header className="site-header">
+
+            <video autoPlay muted>
+               
+                <source src={video} />
+               
+                </video>
+            
+
                 {/* <!-- y este contenedor el texto --> */}
                 <div className="contenedor">
+                    
+            
                     {/* <!-- creamos una tipo barra para aplicar flexbox a barra y a navegacion --> */}
                     <div className="barra">
                         {/* <!-- EL enlaces a la pagina principal --> */}
@@ -71,25 +83,30 @@ const Tienda = ({ _id, onDelete }) => {
                         {/* <Router> */}
                         <nav className="navegacion">
 
-                            <Link to="/tienda" className="boton boton-rosa" >Home</Link>
 
                             <Link to="/Contacto" className="boton boton-rosa" > Contacto</Link>
+                            <Link to="/" className="boton boton-rosa" >Salir</Link>
+
 
 
                         </nav>
+                        
                     </div>
                     {/* <!--cierra barra--> */}
-
+            
 
                     <div className="texto-header">
+                       
                         <h2 className="no-margin">Indumentaria y Accesorios Importados</h2>
                         <p className="no-margin">Lorem ipsum dolor sit amet clitatem aspernatur quas sunt nulla dolorum.</p>
                     </div>
 
                 </div>
+              
                 {/* <!--cierra contenedor--> */}
-                <Link to={'/add'} className="boton boton-rosa d-block">Agregar + productos</Link>
+                
 
+               
             </header>
 
 
@@ -97,7 +114,8 @@ const Tienda = ({ _id, onDelete }) => {
                 loading ?
                     <h2>Cargando...</h2>
                     :
-
+                    <div className='boton-agregaree'>
+                        <Link to={'/add'} className="boton boton-rosa boton-agregar">Agregar + productos</Link>
                     <div className="contenedor-anuncioss">
 
 
@@ -121,7 +139,7 @@ const Tienda = ({ _id, onDelete }) => {
                         })}
                     </div>
 
-
+                    </div>
             }
             {/* agregado */}
 

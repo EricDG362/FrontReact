@@ -63,7 +63,7 @@ const DetailScreen = () => {
                         {/* <Router> */}
                         <nav className="navegacion">
 
-                        <Link to= "/tienda"  className="boton boton-rosa" >  ir a Tienda</Link>
+                            <Link to="/tienda" className="boton boton-rosa" >  ir a Tienda</Link>
 
 
                         </nav>
@@ -81,7 +81,7 @@ const DetailScreen = () => {
 
 
 
-          
+
             {
                 loading ?
                     <h2>Cargando</h2> :
@@ -118,7 +118,8 @@ const DetailScreen = () => {
                                 </Carousel.Caption>
                             </Carousel.Item>
                         </Carousel>
-                        <button class="boton-rosa boton">Comprar</button>
+
+                        <Link to={'/edit/' + product._id} className="boton boton-rosa d-block">Editar</Link>
                     </div>
 
 

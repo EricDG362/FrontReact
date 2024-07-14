@@ -8,6 +8,7 @@ html {
 body{
     font-size: 1.6rem; /*tamaña de letras para el body y usamos rem*/
     background: #e288d6;
+    background-color: #30132c;
     
 }
 
@@ -74,24 +75,33 @@ h4 {
 
 /*HEADER*/
 .site-header{
-    background-image:url(../../screens/Home/img/fondo-negocio-1.jpg);
+    background-image:url(../Home/img/fondo-negocio-1.jpg);
+   
+   
     background-repeat: no-repeat; /*para q no se repita la imagen*/
     background-position: center center; /*la posicionamos*/
     background-size: cover; /*se llena el alto y el ancho*/
     background-attachment: fixed; /*para q se mueva la imagen de fondo*/
     height: 50vh;
     height: 60rem; /*600px de alto para q se vea mejor*/
-  
-   
-    
+
 
 }
+
+.site-header video{
+  position: relative;
+   height: 40rem;
+   width: 120rem;
+  
+}
+
 
 .site-header a{ /* sus enlaces*/
 
     color: beige; /*color del texto*/
     text-decoration: none /* le sacamos la linea de abajo*/;
     margin-top: 1rem; /*10px de sepracion en enlaces*/
+   
    
 }
 
@@ -103,6 +113,7 @@ h4 {
         align-items: center;
         padding-top: 2rem;
         margin-left: 1rem;
+       
     }
 
 }
@@ -110,6 +121,7 @@ h4 {
 .site-header h1{
     text-align: center;
     font-weight: 700;
+    
 }
 
 .site-header span{
@@ -275,6 +287,18 @@ margin-left: 5rem;
     border: solid 2px #931313;
 }
 
+.site-header .boton-agregar{
+    margin-top: 24rem;
+    margin-left: 3rem;
+    
+ 
+
+}
+
+.boton-agregaree{
+    background: #333333;
+    
+}
 
 .d-block {
     display: block;
