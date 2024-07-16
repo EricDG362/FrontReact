@@ -44,7 +44,7 @@ const Tienda = () => {
     const handleDelete = async (productId) => {
         console.log("CONSOL DE HANDLEDELETE,", productId);
         try {
-           
+
             await eliminaProducto(productId);
             navigate('/tienda')  //QUE NAVEGE A tienda
         } catch (error) {
@@ -55,23 +55,27 @@ const Tienda = () => {
     return (
 
         <div>
-           
+
 
 
             {/* // <!-- en este contenedor aplicamos la imagen q se expande --> */}
             <header className="site-header">
 
-            <video autoPlay muted>
-               
-                <source src={video} />
-               
-                </video>
-            
 
                 {/* <!-- y este contenedor el texto --> */}
                 <div className="contenedor">
                     
-            
+                <div className="video-box">
+                        <div className="video">
+
+                            <video width="500" autoPlay muted>
+                                <source src={video} />
+                            </video>
+
+                        </div>
+                    </div>
+
+
                     {/* <!-- creamos una tipo barra para aplicar flexbox a barra y a navegacion --> */}
                     <div className="barra">
                         {/* <!-- EL enlaces a la pagina principal --> */}
@@ -90,23 +94,24 @@ const Tienda = () => {
 
 
                         </nav>
-                        
+
                     </div>
                     {/* <!--cierra barra--> */}
-            
+
 
                     <div className="texto-header">
-                       
-                        <h2 className="no-margin">Indumentaria y Accesorios Importados</h2>
-                        <p className="no-margin">Lorem ipsum dolor sit amet clitatem aspernatur quas sunt nulla dolorum.</p>
+
+                    <h2 className="no-margin  h2-titulo" >Indumentaria y Accesorios Importados</h2>
+                    <p className="no-margin">Todo lo que buscas en nuestra casa central y mucho mas.</p>
                     </div>
 
+                 
                 </div>
-              
-                {/* <!--cierra contenedor--> */}
-                
 
-               
+                {/* <!--cierra contenedor--> */}
+
+
+
             </header>
 
 
@@ -116,28 +121,28 @@ const Tienda = () => {
                     :
                     <div className='boton-agregaree'>
                         <Link to={'/add'} className="boton boton-rosa boton-agregar">Agregar + productos</Link>
-                    <div className="contenedor-anuncioss">
+                        <div className="contenedor-anuncioss">
 
 
-                        {products.map(product => {
-                            return (
-                                <div className="anuuncios">
-                                    <div key={product._id}>
-                                        <img src={imag0} alt="error anuncio 2" />
-                                        <div className="contenido-anuncio">
-                                            <h2 className='titu-tienda'>{product.titulo}</h2>
-                                            <p className='descrip-tienda'>{product.descripcion}</p>
-                                            <span className='precio-tienda'>${product.precio}</span>
-                                            <Link to={'/detail/' + product._id} className="boton boton-rosa d-block">Ver Detalle</Link>
-                                            <button onClick={() => handleDelete(product._id)} type="button" className="boton boton-rojo d-block">Eliminar</button>
+                            {products.map(product => {
+                                return (
+                                    <div className="anuuncios">
+                                        <div key={product._id}>
+                                            <img src={imag0} alt="error anuncio 2" />
+                                            <div className="contenido-anuncio">
+                                                <h2 className='titu-tienda'>{product.titulo}</h2>
+                                                <p className='descrip-tienda'>{product.descripcion}</p>
+                                                <span className='precio-tienda'>${product.precio}</span>
+                                                <Link to={'/detail/' + product._id} className="boton boton-rosa d-block">Ver Detalle</Link>
+                                                <button onClick={() => handleDelete(product._id)} type="button" className="boton boton-rojo d-block">Eliminar</button>
 
+                                            </div>
                                         </div>
-                                    </div>
 
-                                </div>
-                            )
-                        })}
-                    </div>
+                                    </div>
+                                )
+                            })}
+                        </div>
 
                     </div>
             }

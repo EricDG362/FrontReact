@@ -44,49 +44,53 @@ const eliminaProducto = async (pid) => {
 };
 
 
-// const editarProducto = async (pid, editProduct) => {
+ const editarProducto = async (pid, editProduct) => {
+    console.log("🚀 cons0ol fetchin: edit", editProduct)
+    console.log("🚀 cons0ol fetchin: pid:", pid)
+    
+    console.log("esto es la url",URL.URL_API,PRODUCTS_ROUTE)
+   try {
+        const result = await HTTP.PUT(URL.URL_API + PRODUCTS_ROUTE + "/" + pid, editProduct);
 
-//     try {
-//         const result = await HTTP.PUT(URL.URL_API + PRODUCTS_ROUTE + "/" + pid, editProduct);
-//         console.log("🚀 ~ consol de editarproducto:", result.products)
+        console.log("🚀 ~ consol de editarproducto:", result.products)
 
-//         return result.products;
-//     } catch (error) {
+         return result.products;
+    } catch (error) {
 
-//         throw { message: error.message };
-//     }
-// };
+         throw { message: error.message };
+     }
+ };
 
-const editarProducto = async (pid, producto) => {
-    console.log("consol de editarproducto en el fetching producto:", producto)
-    console.log("consol de pid  editarproducto en el fetching:", pid)
+// const editarProducto = async (pid, producto) => {
+//     console.log("consol de editarproducto en el fetching producto:", producto)
+//     console.log("consol de pid  editarproducto en el fetching:", pid)
 
     
-    const { titulo, descripcion, precio, stock, codigo} = producto;
-    try {
-        const resultadoModificar = await Product.findByIdAndUpdate(pid, {
-            titulo,
-            descripcion,
-            precio,
-            stock,
-            codigo,
+//     const { titulo, descripcion, precio, stock, codigo} = producto;
+//     try {
+//         const resultadoModificar = await Product.findByIdAndUpdate(pid, {
+//             titulo,
+//             descripcion,
+//             precio,
+//             stock,
+//             codigo,
             
-        }, { new: true });
+//         }, { new: true });
 
-        if (!resultadoModificar) {
-            throw { status: 404, message: 'PRODUCTO CON ID ' + pid + ' NO ENCONTRADO' };
-        }
-        return resultadoModificar;
-    }
-    catch (error) {
-        if (error.status === 404) {
-            throw error;
-        } else {
-            throw { status: 500, message: 'ERROR INTERNO EN LA BASE DE DATOS.', error };
-        }
-    }
+//         if (!resultadoModificar) {
+//             throw { status: 404, message: 'PRODUCTO CON ID ' + pid + ' NO ENCONTRADO' };
+//         }
+//         return resultadoModificar;
+//     }
+//     catch (error) {
+//         if (error.status === 404) {
+//             throw error;
+//         } else {
+//             throw { status: 500, message: 'ERROR INTERNO EN LA BASE DE DATOS.', error };
+//         }
+//     }
 
-}
+// }
 
 
 export { getProducts, getProductoDetailId, adddproduct, eliminaProducto, editarProducto }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { registrar } from '../../fetching/auth.fetching'
+import imagBienv from "../Home/img/bienvenido.png"
 
 import "./../login/Login.css"
 
@@ -26,25 +27,25 @@ const RegisterScreen = () => {
     return (
 
 
-        <div className="wrapper">
+        <>
 
-            <div className="form-box register">
 
-                <h2 className="anima" style={{ "--i": 17, "--j": 1 }}>Registrarse</h2>
 
+        <div className="body">
+            <section className='Imagen-formu'>
+            <img src={imagBienv} alt="" />
+            </section>
+
+            <section className='formulario'>
                 <form onSubmit={handleSubmit}>
+                    <h2>Registrate</h2>
 
-                    <div className="input-box anima" style={{ "--i": 18, "--j": 2 }}>
-                        <label htmlFor="email"></label>
-                        <i className='bx bxs-user'></i>
-                        <input placeholder='Ingrese su email:' id='email' name='email' />
-                    </div>
+                    <label htmlFor="email">Email :</label>
+                    <input type="text" name="email" id="email" placeholder='  Ingrese su email:' />
 
-                    <div className="input-box anima" style={{ "--i": 19, "--j": 3 }}>
-                        <label htmlFor="password"></label>
-                        <i className='bx bxs-lock-alt'></i>
-                        <input type="text" placeholder='Ingrese su contraseña:' id='password' name='password' />
-                    </div>
+                    <label htmlFor="password">Password :</label>
+                    <input type="text" name="password" id="password" placeholder="  Ingrese su contraseña:" />
+                    <br />
 
                     {
                         errorText
@@ -52,21 +53,21 @@ const RegisterScreen = () => {
                         <span style={{ color: 'red' }}>{errorText}</span>
                     }
 
-                    <button type='submit' className="btn anima" style={{ "--i": 21, "--j": 5 }} >Registrar</button>
+                    {/* boton */}
+                    <button type='submit' className="btn anima">Registrarse</button>
 
-                    <div className="logreg-link anima" style={{ "--i": 22, "--j": 6 }}>
-                        <p>Si posees una cuenta regrese al login, <Link to={'/login'} className="login-link">Volver</Link></p>
+
+                    {/* enlace a registro */}
+                    <div className="enlace">
+                        <p>Si posees una cuenta vuelve al login, <Link to={'/login'} className="register-link" >Login</Link></p>
                     </div>
 
                 </form>
-            </div>
-
-            <div className="info-text register">
-                <h2 className="anima" style={{ "--i": 17, "--j": 0 }}>Crea una cuenta</h2>
-                <p className="anima" style={{ "--i": 18, "--j": 1 }}> Accede a nuestros beneficios para acceder a tus compras y guardar tus favoritos  </p>
-            </div>
+            </section>
 
         </div>
+
+    </>
 
     )
 }

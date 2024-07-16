@@ -17,7 +17,7 @@ export const HTTP = {
             method: 'POST',
             headers: { //avisa ATRAVES DEL HEADER al backend que el contenido que va a enviar es de tipo json (XQ SINO LE ENVIABA UN OBJETO VACIO AL BODY)
                 'Content-Type': 'application/json',
-                'Authorization': localStorage.getItem("token")
+                'authorization': localStorage.getItem("token")
             },
             body: JSON.stringify(body) //EL BODY PASA DE STRING A JSON XQ EL BACKEND RECIBE JSON
         })
@@ -27,11 +27,12 @@ export const HTTP = {
 
 
     PUT: async (url, body) => {
+        try{
         const response = await fetch(url, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': localStorage.getItem("token")
+                'authorization': localStorage.getItem("token")
             },
             body: JSON.stringify(body)
         });
@@ -40,6 +41,11 @@ export const HTTP = {
             throw new Error(error.message || 'Error al actualizar el producto');
         }
         return response.json();
+    } catch (error){
+        console.error("Error en http put", error)
+        throw error
+
+    }
     },
 
 

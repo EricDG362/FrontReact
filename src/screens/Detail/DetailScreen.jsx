@@ -71,8 +71,8 @@ const DetailScreen = () => {
                     {/* <!--cierra barra--> */}
 
                     <div className="texto-header">
-                        <h2 className="no-margin">Indumentaria y Accesorios Importados</h2>
-                        <p className="no-margin">Lorem ipsum dolor sit amet clitatem aspernatur quas sunt nulla dolorum.</p>
+                    <h2 className="no-margin  h2-titulo" >Indumentaria y Accesorios Importados</h2>
+                    <p className="no-margin">Todo lo que buscas en nuestra casa central y mucho mas.</p>
                     </div>
                 </div>
                 {/* <!--cierra contenedor--> */}
@@ -85,7 +85,7 @@ const DetailScreen = () => {
             {
                 loading ?
                     <h2>Cargando</h2> :
-                    <div>
+                    <div className="seccion contenedor contenido-centrado">
 
                         <Carousel data-bs-theme="dark">
                             <Carousel.Item>
@@ -93,7 +93,7 @@ const DetailScreen = () => {
                                     className=" w-100 ancho" src={imag1} alt="First slide" />
                                 <Carousel.Caption>
                                     <h2 className="h2-titu">{product.titulo}</h2>
-                                    <p>{product.descripcion}</p>
+                                    <p  className="p-descrip">{product.descripcion}</p>
                                     <h2 className='precio'>${product.precio}</h2>
                                 </Carousel.Caption>
                             </Carousel.Item>
@@ -103,7 +103,7 @@ const DetailScreen = () => {
                                 />
                                 <Carousel.Caption>
                                     <h2 className="h2-titu">{product.titulo}</h2>
-                                    <p>{product.descripcion}</p>
+                                    <p className="p-descrip">{product.descripcion}</p>
                                     <h2 className='precio'>${product.precio}</h2>
                                 </Carousel.Caption>
                             </Carousel.Item>
@@ -113,7 +113,7 @@ const DetailScreen = () => {
                                 />
                                 <Carousel.Caption>
                                     <h2 className="h2-titu">{product.titulo}</h2>
-                                    <p>{product.descripcion}</p>
+                                    <p  className="p-descrip">{product.descripcion}</p>
                                     <h2 className='precio'>${product.precio}</h2>
                                 </Carousel.Caption>
                             </Carousel.Item>
@@ -135,7 +135,21 @@ const DetailScreen = () => {
 
 
 
+<footer>
+                <p>Siguenos en redes sociales</p>
+                {/* <!--estas logos se ven gracias a fontawesome--> */}
+                <div className="redesSociales">
+                    {/* <!--es texto plano no una imagen x ende para agrandarlo se usa fontsize--> */}
+                    <i className='bx bxl-facebook-circle'></i>
+                    <i className='bx bxl-twitter' ></i>
+                    <i className='bx bxl-instagram-alt' ></i>
+                    <i className='bx bxl-linkedin-square' ></i>
+                    <i className='bx bxl-whatsapp-square' ></i>
+                </div>
+                {/* <!--se le agrega el signo de copyright--> */}
+                <p>&copy; 2023 Valencia Moda</p>
 
+            </footer>
 
 
 

@@ -66,111 +66,70 @@ const AgregarProducto = () => {
                     {/* <!--cierra barra--> */}
 
                     <div className="texto-header">
-                        <h2 className="no-margin">Quieres ser re-vendedora de Valencia-Moda ?</h2>
+                        <h2 className="no-margin">lo mejor de Valencia-Moda esta por venir, no te lo pierdas</h2>
                         <p className="no-margin">Contactate con nosotros</p>
                     </div>
                 </div>
                 {/* <!--cierra contenedor--> */}
             </header>
 
-            {/* <form onSubmit={handleSubmit}>   {/* etiqueta formulario  ACTIVA LA FUNCION HANDLET*/}
-
-            {/* <div className="input-box anima">
-                    <label htmlFor="titulo" ></label>
-
-                    <input id='titulo' name='titulo' placeholder='ingrese nombre del producto:' />
-                </div>
-
-                <div className="input-box anima">
-                    <label htmlFor="descripcion"></label>
-
-                    <input type="text" id='descripcion' name='descripcion' placeholder="descripcion:" />
-                </div>
-
-                <div className="input-box anima">
-                    <label htmlFor="precio"></label>
-
-                    <input type="text" id='precio' name='precio' placeholder="precio" />
-                </div>
-
-                <div className="input-box anima">
-                    <label htmlFor="stock"></label>
-
-                    <input type="number" id='stock' name='stock' placeholder="stock:" />
-                </div>
-
-                <div className="input-box anima">
-                    <label htmlFor="codigo"></label>
-
-                    <input type="text" id='codigo' name='codigo' placeholder="codigo:" />
-                </div>
-
-                {
-                    errorText
-                    &&
-                    <span style={{ color: 'red' }}>{errorText}</span>
-                } */}
-
-            {/* boton */}
-            {/* <button type='submit' className="btn anima">Agregar</button>
 
 
+            {/*empieza formulario */}
+            <div className="seccion contenedor contenido-centrado">
+                <h2 className="centrar-texto fw-300">AGREGAR PRODUCTO</h2>
 
-            </form> */}
+                {/* <!--creamos la etiqueta form para el formulario a llenar--> */}
+                <form onSubmit={handleSubmit} className="contactosss">
 
-            {/*empieza Contacto */}
-            <main className="seccion contenedor contenido-centrado" />
-            <h2 className="centrar-texto fw-300">AGREGAR PRODUCTO</h2>
+                    {/* <!--agrupa los camppos--> */}
+                    <fieldset>
+                        <legend>LLENE TODOS LOS CAMPOS</legend>
 
-            {/* <!--creamos la etiqueta form para el formulario a llenar--> */}
-            <form onSubmit={handleSubmit} className="contactosss">
+                        <label htmlFor="titulo">TITULO: </label>
+                        <input type="text" id="titulo" name='titulo' placeholder="INGRESE TITULO MAYOR A 3 CARACTERES" />
 
-            {/* <!--agrupa los camppos--> */}
-            <fieldset>
-                <legend>LLENE TODOS LOS CAMPOS</legend>
-                <label htmlFor="titulo">TITULO: </label>
-                <input type="text" id="titulo" name='titulo' placeholder="INGRESE TITULO MAYOR A 3 CARACTERES" />
+                        <label htmlFor="descripcion">DESCRIPCION: </label>
+                        <input
+                            type="descripcion"
+                            id="descripcion"
+                            name='descripcion'
+                            placeholder="DESCRPCION MAYOR A 20 CARACTERES"
+                            required
+                        />
 
-                <label htmlFor="descripcion">DESCRIPCION: </label>
-                <input
-                    type="descripcion"
-                    id="descripcion"
-                    name='descripcion'
-                    placeholder="DESCRPCION MAYOR A 20 CARACTERES"
-                    required
-                />
+                        <label htmlFor="precio">PRECIO: </label>
+                        <input
+                            type="text"
+                            id="precio"
+                            name='precio'
+                            placeholder="COLOQUE PRECIO MAYOR A $1"
+                            required
+                        />
 
-                <label htmlFor="precio">PRECIO $: </label>
-                <input
-                    type="text"
-                    id="precio"
-                    name='precio'
-                    placeholder="COLOQUE PRECIO MAYOR A $1"
-                    required
-                />
+                        <label htmlFor="stock">STOCK: </label>
+                        <input type="text" id="stock" name='stock' placeholder="COLOQUE UN STOCK MAYOR A 1" />
 
-                <label htmlFor="stock">STOCK: </label>
-                <input type="text" id="stock" name='stock' placeholder="COLOQUE UN STOCK MAYOR A 1" />
+                        <label htmlFor="codigo">CODIGO: </label>
+                        <input type="text" id="codigo" name='codigo' placeholder="COLOQUE UN CODIGO MAYOR A 3 CARACTERES" />
+                    </fieldset>
 
-                <label htmlFor="codigo">CODIGO: </label>
-                <input type="text" id="codigo" name='codigo' placeholder="COLOQUE UN CODIGO MAYOR A 3 CARACTERES" />
-            </fieldset>
-
-            {
-                errorText
-                &&
-                <span style={{ color: 'red' }}>{errorText}</span>
-            }
+                    {
+                        errorText
+                        &&
+                        <span style={{ color: 'red' }}>{errorText}</span>
+                    }
 
 
 
-            {/* boton */}
-            <button type='submit' className="btn anima">AGREGAR</button>
+                    {/* boton */}
+                    <button type='submit' className="boton boton-rosa">AGREGAR</button>
 
-        </form>
+                </form>
+
+            </div>
 
         </div>
-
     )
 
 }

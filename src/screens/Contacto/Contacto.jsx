@@ -1,5 +1,5 @@
 // import logo from "../../screens/Home/img/fondo.logo.png"
-import '../Tienda/Tienda.css'
+import "./../Tienda/Tienda.css"
 import { Link } from 'react-router-dom'
 
 
@@ -21,8 +21,8 @@ function Contacto() {
                         </a>
                         <nav className="navegacion">
 
-                            <Link to= "/tienda"  className="boton boton-rosa" >Tienda</Link>
-                        <Link to= "/"  className="boton boton-rosa" >salir</Link>
+                            <Link to="/tienda" className="boton boton-rosa" >Tienda</Link>
+                            <Link to="/" className="boton boton-rosa" >salir</Link>
 
                         </nav>
 
@@ -42,63 +42,66 @@ function Contacto() {
 
 
             {/*empieza Contacto */}
-            <main className="seccion contenedor contenido-centrado" />
-            <h2 className="centrar-texto fw-300">Llena el Formulario</h2>
+            <div className="seccion contenedor contenido-centrado">
+                <h2 className="centrar-texto fw-300">Llena el Formulario</h2>
 
-            {/* <!--creamos la etiqueta form para el formulario a llenar--> */}
-            <form action="" className="contactosss" />
+                {/* <!--creamos la etiqueta form para el formulario a llenar--> */}
+                <div className="contactosss">
+                    <form action=""  />
 
-            {/* <!--agrupa los camppos--> */}
-            <fieldset>
-                <legend>Informacion Personal</legend>
-                <label htmlFor="nombre">Nombre: </label>
-                <input type="text" id="nombre" placeholder="Tu Nombre" />
+                    {/* <!--agrupa los camppos--> */}
+                    <fieldset>
+                        <legend>Informacion Personal</legend>
+                        <label htmlFor="nombre">Nombre: </label>
+                        <input type="text" id="nombre" placeholder="Tu Nombre" />
 
-                <label htmlFor="email">E-mail: </label>
-                <input
-                    type="email"
-                    id="email"
-                    placeholder="Tu correo electronico"
-                    required
-                />
+                        <label htmlFor="email">E-mail: </label>
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Tu correo electronico"
+                            required
+                        />
 
-                <label htmlFor="telefono">Telefono: </label>
-                <input
-                    type="tel"
-                    id="telefono"
-                    placeholder="Tu telefono"
-                    required
-                />
+                        <label htmlFor="telefono">Telefono: </label>
+                        <input
+                            type="tel"
+                            id="telefono"
+                            placeholder="Tu telefono"
+                            required
+                        />
 
-                <label htmlFor="mensaje">Mensaje: </label>
-                <textarea id="mensaje"></textarea>
-            </fieldset>
+                        <label htmlFor="mensaje">Mensaje: </label>
+                        <textarea id="mensaje"></textarea>
+                    </fieldset>
 
-            <fieldset>
-                <legend>Contacto</legend>
+                    <fieldset>
+                        <legend>Contacto</legend>
 
-                <p>Como Desea Ser Contactado:</p>
-                <div className="forma">
-                    <label htmlFor="telefonoRadio">Telefono</label>
-                    <input
-                        type="radio"
-                        id="telefonoRadio"
-                        value="Telefono"
-                        name="contactos"
-                    />
-                    <label htmlFor="correo">Correo</label>
-                    <input type="radio" id="correo" value="correo" name="contactos" />
+                        <p>Como Desea Ser Contactado:</p>
+                        <div className="forma">
+                            <label htmlFor="telefonoRadio">Telefono</label>
+                            <input
+                                type="radio"
+                                id="telefonoRadio"
+                                value="Telefono"
+                                name="contactos"
+                            />
+                            <label htmlFor="correo">Correo</label>
+                            <input type="radio" id="correo" value="correo" name="contactos" />
+                        </div>
+
+                        <p>Si elijio telefono, indique fecha y hora</p>
+
+                        <label htmlFor="fecha">Fecha: </label>
+                        <input type="date" id="fecha" />
+                        <label htmlFor="hora">Hora:</label>
+                        <input type="time" id="hora" min="09:00" max="06:00" />
+                    </fieldset>
+
+                    <input type="submit" value="Enviar" className="boton boton-rosa" />
                 </div>
-
-                <p>Si elijio telefono, indique fecha y hora</p>
-
-                <label htmlFor="fecha">Fecha: </label>
-                <input type="date" id="fecha" />
-                <label htmlFor="hora">Hora:</label>
-                <input type="time" id="hora" min="09:00" max="06:00" />
-            </fieldset>
-
-            <input type="submit" value="Enviar" className="boton boton-rosa" />
+            </div>
 
             {/* termina contacto */}
 

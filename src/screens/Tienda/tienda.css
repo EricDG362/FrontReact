@@ -8,7 +8,7 @@ html {
 body{
     font-size: 1.6rem; /*tamaña de letras para el body y usamos rem*/
     background: #e288d6;
-    background-color: #30132c;
+    background-color: #b39f57;
     
 }
 
@@ -44,6 +44,7 @@ h4 {
     width: 100%;
     margin: 0   auto;
    
+   
 }
 
 .contenido-centrado {
@@ -55,6 +56,7 @@ h4 {
 
     margin-top: 2rem;
     margin-bottom: 2rem;
+  
 
 }
 
@@ -88,11 +90,18 @@ h4 {
 
 }
 
-.site-header video{
-  position: relative;
-   height: 40rem;
-   width: 120rem;
-  
+.video-box{
+    
+    width: 100%;
+    max-width: 830px;
+    height: auto;
+    margin: 20px auto 0;
+    z-index: -1;
+}
+
+.video video{
+    width: 100%;
+    height: auto;
 }
 
 
@@ -232,7 +241,13 @@ margin-left: 5rem;
 }
 
 .h2-titu{
+    color: #cc26b3;
+    font-size: 5.5rem;
+}
+
+.p-descrip{
     color: #f5f5f5;
+    font-size: 3rem;
 }
  
 
@@ -296,7 +311,7 @@ margin-left: 5rem;
 }
 
 .boton-agregaree{
-    background: #333333;
+    background: #d0cec5;
     
 }
 
@@ -328,6 +343,11 @@ margin-left: 5rem;
 
 }
 
+h2 .h2-titulo{
+    font-size: 8rem;
+    font-weight: bold;
+
+}
 
 
 
@@ -395,6 +415,7 @@ label {
     font-size: 1.4rem;
     color: #4f4f4f;
     margin: 2rem 0 0 0;
+  
 }
 
 fieldset {
