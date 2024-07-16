@@ -41,6 +41,8 @@
     align-items: center;
 }
 
+
+
 .formulario h2{
     font-size: 4em;
     color: rgb(207, 62, 36);
@@ -52,6 +54,7 @@
 width: 100%;
 padding: 10px 0;
 font-size: 1.2em;
+font-weight: bold;
 color: rgb(11, 11, 58);
 background-color: rgb(244, 227, 208);
 }

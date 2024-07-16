@@ -403,6 +403,7 @@ legend{
 }
 
 label {
+    font-size: 16PX;
     font-weight: 700; /*mas grueso*/
     text-transform: uppercase; /*todo mayuscula*/
     margin-bottom: 1rem;
@@ -431,7 +432,9 @@ input:not([type="submit"]),textarea, select { /*que aplique a todos los input ex
     margin-bottom: 2rem; /*margen de abajo*/
     border: none;
     border-radius: 1rem;
-    color: #e288d6;
+    color: #6f1111;
+    font-size: 14px;
+    font-weight: 500;
 
 }
 

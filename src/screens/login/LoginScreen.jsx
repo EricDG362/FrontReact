@@ -39,13 +39,13 @@ const LoginScreen = () => {
 
                 <section className='formulario'>
                     <form onSubmit={handleSubmit}>
-                        <h2>Acceso a Login</h2>
+                        <h2 className='barrita'>Acceso a Login</h2>
 
                         <label htmlFor="email">Email :</label>
                         <input type="text" name="email" id="email" placeholder='  Ingrese su email:' />
 
                         <label htmlFor="password">Password :</label>
-                        <input type="text" name="password" id="password" placeholder="  Ingrese su contraseña:" />
+                        <input type="password" name="password" id="password" placeholder="  Ingrese su contraseña:" />
                         <br />
 
                         {
